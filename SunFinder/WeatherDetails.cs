@@ -44,6 +44,14 @@ namespace SunFinder
             double speed { get; set; }
         }
 
+        public class system
+        {
+            // from sys.sunrise
+            long sunrise { get; set; }
+            // from sys.sunset
+            long sunset { get; set; }
+        }
+
         public class main
         {
             public coordinates coord { get; set; }
