@@ -19,7 +19,7 @@ namespace SunFinder
             InitializeComponent();
         }
 
-        string APIkey = "cf20561ce137565baf710599e21bc9be";
+        readonly string APIkey = "cf20561ce137565baf710599e21bc9be";
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -46,18 +46,36 @@ namespace SunFinder
                 labelCondition.Text = details.weather[0].main;
                 labelDetails.Text = details.weather[0].description;
 
-                labelHumidity.Text = details.main.humidity.ToString();
-                labelTemperature.Text = details.main.temp.ToString();
-                labelFeelsLike.Text = details.main.feels_like.ToString();
+                labelHumidity.Text = details.main.humidity.ToString() + " %";
+                labelTemperature.Text = 
+                    convertKelvinToCelsius(details.main.temp).ToString() + " °C";
+                labelFeelsLike.Text = 
+                    convertKelvinToCelsius(details.main.feels_like).ToString() + " °C";
 
-                labelSunrise.Text = details.sys.sunrise.ToString();
-                labelSunset.Text = details.sys.sunset.ToString();
+                labelSunrise.Text = convertDT(details.sys.sunrise).ToShortTimeString();
+                labelSunset.Text = convertDT(details.sys.sunset).ToShortTimeString();
 
-                labelWindSpeed.Text = details.wind.speed.ToString();
-                labelPressure.Text = details.main.pressure.ToString();
+                labelWindSpeed.Text = details.wind.speed.ToString() + " m/s";
+                labelPressure.Text = 
+                    details.main.pressure.ToString() + " hPa (hectopascals)";
 
-                labelCityName.Text = txtBoxCity.Text;
+                labelLocationName.Text = txtBoxCity.Text;
             }
+        }
+
+        DateTime convertDT(long sec)
+        {
+            // (year, month, day, hours, mins, seconds, millisec, ...)
+            DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
+            DateTime result = day.AddSeconds(sec).ToLocalTime();
+
+            return result;
+        }
+
+        double convertKelvinToCelsius(double temp)
+        {
+            double result = temp - 273.15;
+            return Math.Round(result, 2);
         }
     }
 }

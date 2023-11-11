@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.labelCity = new System.Windows.Forms.Label();
+            this.labelLocation = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBoxCity = new System.Windows.Forms.TextBox();
             this.labelCondition = new System.Windows.Forms.Label();
@@ -49,29 +49,29 @@
             this.labelTemperature = new System.Windows.Forms.Label();
             this.labelFeelsLikeInfo = new System.Windows.Forms.Label();
             this.labelFeelsLike = new System.Windows.Forms.Label();
-            this.labelCityName = new System.Windows.Forms.Label();
+            this.labelLocationName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelCity
+            // labelLocation
             // 
-            this.labelCity.AutoSize = true;
-            this.labelCity.BackColor = System.Drawing.Color.Transparent;
-            this.labelCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCity.ForeColor = System.Drawing.Color.White;
-            this.labelCity.Location = new System.Drawing.Point(61, 34);
-            this.labelCity.Name = "labelCity";
-            this.labelCity.Size = new System.Drawing.Size(71, 32);
-            this.labelCity.TabIndex = 0;
-            this.labelCity.Text = "City:";
+            this.labelLocation.AutoSize = true;
+            this.labelLocation.BackColor = System.Drawing.Color.Transparent;
+            this.labelLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLocation.ForeColor = System.Drawing.Color.White;
+            this.labelLocation.Location = new System.Drawing.Point(61, 34);
+            this.labelLocation.Name = "labelLocation";
+            this.labelLocation.Size = new System.Drawing.Size(236, 32);
+            this.labelLocation.TabIndex = 0;
+            this.labelLocation.Text = "Location (by city):";
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(384, 34);
+            this.btnSearch.Location = new System.Drawing.Point(547, 34);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(151, 39);
+            this.btnSearch.Size = new System.Drawing.Size(160, 46);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -81,7 +81,7 @@
             // 
             this.txtBoxCity.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.txtBoxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCity.Location = new System.Drawing.Point(148, 34);
+            this.txtBoxCity.Location = new System.Drawing.Point(303, 34);
             this.txtBoxCity.Name = "txtBoxCity";
             this.txtBoxCity.Size = new System.Drawing.Size(215, 39);
             this.txtBoxCity.TabIndex = 1;
@@ -288,17 +288,17 @@
             this.labelFeelsLike.TabIndex = 20;
             this.labelFeelsLike.Text = "Unknown";
             // 
-            // labelCityName
+            // labelLocationName
             // 
-            this.labelCityName.AutoSize = true;
-            this.labelCityName.BackColor = System.Drawing.Color.Transparent;
-            this.labelCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCityName.ForeColor = System.Drawing.Color.White;
-            this.labelCityName.Location = new System.Drawing.Point(690, 52);
-            this.labelCityName.Name = "labelCityName";
-            this.labelCityName.Size = new System.Drawing.Size(89, 46);
-            this.labelCityName.TabIndex = 21;
-            this.labelCityName.Text = "City";
+            this.labelLocationName.AutoSize = true;
+            this.labelLocationName.BackColor = System.Drawing.Color.Transparent;
+            this.labelLocationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLocationName.ForeColor = System.Drawing.Color.White;
+            this.labelLocationName.Location = new System.Drawing.Point(815, 51);
+            this.labelLocationName.Name = "labelLocationName";
+            this.labelLocationName.Size = new System.Drawing.Size(173, 46);
+            this.labelLocationName.TabIndex = 21;
+            this.labelLocationName.Text = "Location";
             // 
             // Form1
             // 
@@ -306,8 +306,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1086, 557);
-            this.Controls.Add(this.labelCityName);
+            this.ClientSize = new System.Drawing.Size(1108, 557);
+            this.Controls.Add(this.labelLocationName);
             this.Controls.Add(this.labelFeelsLike);
             this.Controls.Add(this.labelFeelsLikeInfo);
             this.Controls.Add(this.labelTemperature);
@@ -327,10 +327,10 @@
             this.Controls.Add(this.labelCondition);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtBoxCity);
-            this.Controls.Add(this.labelCity);
+            this.Controls.Add(this.labelLocation);
             this.DoubleBuffered = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "SunFinder";
             ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -339,7 +339,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelCity;
+        private System.Windows.Forms.Label labelLocation;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtBoxCity;
         private System.Windows.Forms.Label labelCondition;
@@ -359,7 +359,7 @@
         private System.Windows.Forms.Label labelTemperature;
         private System.Windows.Forms.Label labelFeelsLikeInfo;
         private System.Windows.Forms.Label labelFeelsLike;
-        private System.Windows.Forms.Label labelCityName;
+        private System.Windows.Forms.Label labelLocationName;
     }
 }
 
