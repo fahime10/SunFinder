@@ -1,0 +1,13 @@
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\SunFinder.exe.config
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\SunFinder.exe
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\SunFinder.pdb
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.csproj.AssemblyReference.cache
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.Form1.resources
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.Properties.Resources.resources
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.csproj.GenerateResource.cache
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.csproj.CoreCompileInputs.cache
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.csproj.CopyComplete
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.exe
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.pdb

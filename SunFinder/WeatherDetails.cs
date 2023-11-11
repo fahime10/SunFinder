@@ -11,53 +11,54 @@ namespace SunFinder
         public class coordinates
         {
             // from coord.lon
-            double longitude { get; set; }
+            public double longitude { get; set; }
             // from coord.lat
-            double latitude { get; set; }
+            public double latitude { get; set; }
         }
 
         public class weather
         {
             // from weather.main
-            string curr_weather { get; set; }
+            public string main { get; set; }
             // from weather.description
-            string description { get; set; }
+            public string description { get; set; }
             // from weather.icon
-            string image_link { get; set; }
+            public string icon { get; set; }
         }
 
-        public class main_info
+        public class main
         {
             // from main.temp
-            double temperature { get; set; }
+            public double temp { get; set; }
             //from main.pressure
-            double pressure { get; set; }
+            public double pressure { get; set; }
             // from main.humidity
-            double humidity { get; set; }
+            public double humidity { get; set; }
             // from main.feels_like
-            double feels_like { get; set; }
+            public double feels_like { get; set; }
         }
 
         public class wind
         {
             // from wind.speed
-            double speed { get; set; }
+            public double speed { get; set; }
         }
 
-        public class system
+        public class sys
         {
             // from sys.sunrise
-            long sunrise { get; set; }
+            public long sunrise { get; set; }
             // from sys.sunset
-            long sunset { get; set; }
+            public long sunset { get; set; }
         }
 
-        public class main
+        public class result
         {
             public coordinates coord { get; set; }
             public List<weather> weather { get; set; }
-            public main_info info { get; set; }
+            public main main { get; set; }
             public wind wind { get; set; }
+            public sys sys { get; set; }
         }
     }
 
