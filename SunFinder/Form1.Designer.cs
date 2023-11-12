@@ -50,6 +50,7 @@
             this.labelFeelsLikeInfo = new System.Windows.Forms.Label();
             this.labelFeelsLike = new System.Windows.Forms.Label();
             this.labelLocationName = new System.Windows.Forms.Label();
+            this.btnCurr = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -294,11 +295,24 @@
             this.labelLocationName.BackColor = System.Drawing.Color.Transparent;
             this.labelLocationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLocationName.ForeColor = System.Drawing.Color.White;
-            this.labelLocationName.Location = new System.Drawing.Point(815, 51);
+            this.labelLocationName.Location = new System.Drawing.Point(316, 143);
             this.labelLocationName.Name = "labelLocationName";
             this.labelLocationName.Size = new System.Drawing.Size(173, 46);
             this.labelLocationName.TabIndex = 21;
             this.labelLocationName.Text = "Location";
+            // 
+            // btnCurr
+            // 
+            this.btnCurr.BackColor = System.Drawing.Color.Transparent;
+            this.btnCurr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCurr.ForeColor = System.Drawing.Color.Black;
+            this.btnCurr.Location = new System.Drawing.Point(772, 34);
+            this.btnCurr.Name = "btnCurr";
+            this.btnCurr.Size = new System.Drawing.Size(246, 46);
+            this.btnCurr.TabIndex = 22;
+            this.btnCurr.Text = "Current Location";
+            this.btnCurr.UseVisualStyleBackColor = false;
+            this.btnCurr.Click += new System.EventHandler(this.btnCurr_Click);
             // 
             // Form1
             // 
@@ -307,6 +321,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1108, 557);
+            this.Controls.Add(this.btnCurr);
             this.Controls.Add(this.labelLocationName);
             this.Controls.Add(this.labelFeelsLike);
             this.Controls.Add(this.labelFeelsLikeInfo);
@@ -360,6 +375,7 @@
         private System.Windows.Forms.Label labelFeelsLikeInfo;
         private System.Windows.Forms.Label labelFeelsLike;
         private System.Windows.Forms.Label labelLocationName;
+        private System.Windows.Forms.Button btnCurr;
     }
 }
 
