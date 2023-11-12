@@ -11,3 +11,5 @@ C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.csproj.CoreC
 C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.csproj.CopyComplete
 C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.exe
 C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.pdb
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\System.Numerics.Vectors.xml
