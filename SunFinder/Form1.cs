@@ -16,6 +16,7 @@ namespace SunFinder
     public partial class Form1 : Form
     {
         private GeoCoordinateWatcher geoWatcher;
+        private bool isCelsius = true;
 
         // Light mode colors
         Color lightBackColor = Color.CadetBlue;
@@ -120,9 +121,9 @@ namespace SunFinder
 
                     labelHumidity.Text = details.main.humidity.ToString() + " %";
                     labelTemperature.Text =
-                        convertKelvinToCelsius(details.main.temp).ToString() + " °C";
+                        convertKelvinToCelsius(details.main.temp).ToString();
                     labelFeelsLike.Text =
-                        convertKelvinToCelsius(details.main.feels_like).ToString() + " °C";
+                        convertKelvinToCelsius(details.main.feels_like).ToString();
 
                     labelSunrise.Text = convertDT(details.sys.sunrise).ToShortTimeString();
                     labelSunset.Text = convertDT(details.sys.sunset).ToShortTimeString();
@@ -138,8 +139,7 @@ namespace SunFinder
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Application.Exit();
+                MessageBox.Show("Please enter a sensible city", "Error");
             }
         }
 
@@ -156,6 +156,46 @@ namespace SunFinder
         {
             double result = temp - 273.15;
             return Math.Round(result, 2);
+        }
+
+        private void btnToF_Click(object sender, EventArgs e)
+        {
+            tempConverter();
+        }
+
+        void tempConverter()
+        {
+            try
+            {
+                double valueTemp = Convert.ToDouble(labelTemperature.Text);
+                double valueFeels = Convert.ToDouble(labelFeelsLike.Text);
+
+                if (isCelsius)
+                {
+                    valueTemp = (valueTemp * 9 / 5) + 32;
+                    valueFeels = (valueFeels * 9 / 5) + 32;
+                    isCelsius = false;
+                    btnConverter.Text = "To °C";
+                    labelUnit1.Text = "°F";
+                    labelUnit2.Text = "°F";
+                } 
+                else
+                {
+                    valueTemp = (valueTemp - 32) * 5 / 9;
+                    valueFeels = (valueFeels - 32) * 5 / 9;
+                    isCelsius = true;
+                    btnConverter.Text = "To °F";
+                    labelUnit1.Text = "°C";
+                    labelUnit2.Text = "°C";
+                }
+
+                labelTemperature.Text = valueTemp.ToString();
+                labelFeelsLike.Text = valueFeels.ToString();
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Please input a city first", "Error");
+            }
         }
     }
 }
