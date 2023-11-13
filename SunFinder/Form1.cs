@@ -16,10 +16,57 @@ namespace SunFinder
     public partial class Form1 : Form
     {
         private GeoCoordinateWatcher geoWatcher;
+
+        // Light mode colors
+        Color lightBackColor = Color.CadetBlue;
+        Color lightForeColor = Color.Black;
+
+        // Dark mode colors
+        Color darkBackColor = Color.FromArgb(31, 31, 31);
+        Color darkForeColor = Color.White;
+
         public Form1()
         {
             InitializeComponent();
             GeoWatcher();
+        }
+
+        private void ApplyColorScheme(bool isDarkMode, Control control)
+        {
+            if (isDarkMode)
+            {
+                control.BackColor = darkBackColor;
+                control.ForeColor = darkForeColor;
+                btnMode.Text = "Dark Mode";
+            } 
+            else
+            {
+                control.BackColor = lightBackColor;
+                control.ForeColor = lightForeColor;
+                btnMode.Text = "Light Mode";
+            }
+
+            foreach (Control childControl in control.Controls)
+            {
+                ApplyColorScheme(isDarkMode, childControl);
+            }
+        }
+
+        private void ToggleDarkMode()
+        {
+            Properties.Settings.Default.DarkMode = !Properties.Settings.Default.DarkMode;
+
+            ApplyColorScheme(Properties.Settings.Default.DarkMode, this);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
+
+        private void btnMode_Click(object sender, EventArgs e)
+        {
+            ToggleDarkMode();
         }
 
         private void GeoWatcher()
@@ -50,11 +97,6 @@ namespace SunFinder
         readonly string APIkey = "cf20561ce137565baf710599e21bc9be";
 
         private void btnSearch_Click(object sender, EventArgs e)
-        {
-            useWeatherAPI();
-        }
-
-        void useWeatherAPI()
         {
             try
             {
@@ -93,9 +135,10 @@ namespace SunFinder
                         txtBoxCity.Text.Substring(0, 1).ToUpper() + txtBoxCity.Text.Substring(1);
                 }
 
-            } catch (Exception e)
+            }
+            catch (Exception ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
                 Application.Exit();
             }
         }

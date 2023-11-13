@@ -51,16 +51,17 @@
             this.labelFeelsLike = new System.Windows.Forms.Label();
             this.labelLocationName = new System.Windows.Forms.Label();
             this.btnCurr = new System.Windows.Forms.Button();
+            this.btnMode = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).BeginInit();
             this.SuspendLayout();
             // 
             // labelLocation
             // 
             this.labelLocation.AutoSize = true;
-            this.labelLocation.BackColor = System.Drawing.Color.Transparent;
+            this.labelLocation.BackColor = System.Drawing.Color.CadetBlue;
             this.labelLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLocation.ForeColor = System.Drawing.Color.White;
-            this.labelLocation.Location = new System.Drawing.Point(61, 34);
+            this.labelLocation.Location = new System.Drawing.Point(20, 33);
             this.labelLocation.Name = "labelLocation";
             this.labelLocation.Size = new System.Drawing.Size(236, 32);
             this.labelLocation.TabIndex = 0;
@@ -68,9 +69,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(547, 34);
+            this.btnSearch.Location = new System.Drawing.Point(515, 34);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(160, 46);
             this.btnSearch.TabIndex = 2;
@@ -80,9 +82,10 @@
             // 
             // txtBoxCity
             // 
-            this.txtBoxCity.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.txtBoxCity.BackColor = System.Drawing.Color.CadetBlue;
+            this.txtBoxCity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBoxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCity.Location = new System.Drawing.Point(303, 34);
+            this.txtBoxCity.Location = new System.Drawing.Point(274, 34);
             this.txtBoxCity.Name = "txtBoxCity";
             this.txtBoxCity.Size = new System.Drawing.Size(215, 39);
             this.txtBoxCity.TabIndex = 1;
@@ -90,7 +93,7 @@
             // labelCondition
             // 
             this.labelCondition.AutoSize = true;
-            this.labelCondition.BackColor = System.Drawing.Color.Transparent;
+            this.labelCondition.BackColor = System.Drawing.Color.CadetBlue;
             this.labelCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCondition.ForeColor = System.Drawing.Color.White;
             this.labelCondition.Location = new System.Drawing.Point(72, 235);
@@ -102,7 +105,7 @@
             // labelDetails
             // 
             this.labelDetails.AutoSize = true;
-            this.labelDetails.BackColor = System.Drawing.Color.Transparent;
+            this.labelDetails.BackColor = System.Drawing.Color.CadetBlue;
             this.labelDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDetails.ForeColor = System.Drawing.Color.White;
             this.labelDetails.Location = new System.Drawing.Point(72, 301);
@@ -114,7 +117,7 @@
             // labelSunriseInfo
             // 
             this.labelSunriseInfo.AutoSize = true;
-            this.labelSunriseInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelSunriseInfo.BackColor = System.Drawing.Color.CadetBlue;
             this.labelSunriseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSunriseInfo.ForeColor = System.Drawing.Color.White;
             this.labelSunriseInfo.Location = new System.Drawing.Point(572, 235);
@@ -126,7 +129,7 @@
             // labelSunrise
             // 
             this.labelSunrise.AutoSize = true;
-            this.labelSunrise.BackColor = System.Drawing.Color.Transparent;
+            this.labelSunrise.BackColor = System.Drawing.Color.CadetBlue;
             this.labelSunrise.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSunrise.ForeColor = System.Drawing.Color.White;
             this.labelSunrise.Location = new System.Drawing.Point(766, 235);
@@ -138,7 +141,7 @@
             // labelSunsetInfo
             // 
             this.labelSunsetInfo.AutoSize = true;
-            this.labelSunsetInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelSunsetInfo.BackColor = System.Drawing.Color.CadetBlue;
             this.labelSunsetInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSunsetInfo.ForeColor = System.Drawing.Color.White;
             this.labelSunsetInfo.Location = new System.Drawing.Point(572, 301);
@@ -150,7 +153,7 @@
             // labelSunset
             // 
             this.labelSunset.AutoSize = true;
-            this.labelSunset.BackColor = System.Drawing.Color.Transparent;
+            this.labelSunset.BackColor = System.Drawing.Color.CadetBlue;
             this.labelSunset.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSunset.ForeColor = System.Drawing.Color.White;
             this.labelSunset.Location = new System.Drawing.Point(766, 301);
@@ -162,7 +165,7 @@
             // labelWindSpeedInfo
             // 
             this.labelWindSpeedInfo.AutoSize = true;
-            this.labelWindSpeedInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelWindSpeedInfo.BackColor = System.Drawing.Color.CadetBlue;
             this.labelWindSpeedInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWindSpeedInfo.ForeColor = System.Drawing.Color.White;
             this.labelWindSpeedInfo.Location = new System.Drawing.Point(572, 373);
@@ -174,7 +177,7 @@
             // labelWindSpeed
             // 
             this.labelWindSpeed.AutoSize = true;
-            this.labelWindSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.labelWindSpeed.BackColor = System.Drawing.Color.CadetBlue;
             this.labelWindSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWindSpeed.ForeColor = System.Drawing.Color.White;
             this.labelWindSpeed.Location = new System.Drawing.Point(766, 373);
@@ -186,7 +189,7 @@
             // labelPressureInfo
             // 
             this.labelPressureInfo.AutoSize = true;
-            this.labelPressureInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelPressureInfo.BackColor = System.Drawing.Color.CadetBlue;
             this.labelPressureInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPressureInfo.ForeColor = System.Drawing.Color.White;
             this.labelPressureInfo.Location = new System.Drawing.Point(572, 444);
@@ -198,7 +201,7 @@
             // labelPressure
             // 
             this.labelPressure.AutoSize = true;
-            this.labelPressure.BackColor = System.Drawing.Color.Transparent;
+            this.labelPressure.BackColor = System.Drawing.Color.CadetBlue;
             this.labelPressure.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPressure.ForeColor = System.Drawing.Color.White;
             this.labelPressure.Location = new System.Drawing.Point(766, 444);
@@ -209,7 +212,7 @@
             // 
             // pictureImage
             // 
-            this.pictureImage.BackColor = System.Drawing.Color.Transparent;
+            this.pictureImage.BackColor = System.Drawing.Color.CadetBlue;
             this.pictureImage.Location = new System.Drawing.Point(78, 109);
             this.pictureImage.Name = "pictureImage";
             this.pictureImage.Size = new System.Drawing.Size(178, 105);
@@ -220,7 +223,7 @@
             // labelHumidityInfo
             // 
             this.labelHumidityInfo.AutoSize = true;
-            this.labelHumidityInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelHumidityInfo.BackColor = System.Drawing.Color.CadetBlue;
             this.labelHumidityInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHumidityInfo.ForeColor = System.Drawing.Color.White;
             this.labelHumidityInfo.Location = new System.Drawing.Point(72, 373);
@@ -232,7 +235,7 @@
             // labelHumidity
             // 
             this.labelHumidity.AutoSize = true;
-            this.labelHumidity.BackColor = System.Drawing.Color.Transparent;
+            this.labelHumidity.BackColor = System.Drawing.Color.CadetBlue;
             this.labelHumidity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHumidity.ForeColor = System.Drawing.Color.White;
             this.labelHumidity.Location = new System.Drawing.Point(307, 373);
@@ -244,7 +247,7 @@
             // labelTemperatureInfo
             // 
             this.labelTemperatureInfo.AutoSize = true;
-            this.labelTemperatureInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelTemperatureInfo.BackColor = System.Drawing.Color.CadetBlue;
             this.labelTemperatureInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTemperatureInfo.ForeColor = System.Drawing.Color.White;
             this.labelTemperatureInfo.Location = new System.Drawing.Point(72, 444);
@@ -256,7 +259,7 @@
             // labelTemperature
             // 
             this.labelTemperature.AutoSize = true;
-            this.labelTemperature.BackColor = System.Drawing.Color.Transparent;
+            this.labelTemperature.BackColor = System.Drawing.Color.CadetBlue;
             this.labelTemperature.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTemperature.ForeColor = System.Drawing.Color.White;
             this.labelTemperature.Location = new System.Drawing.Point(307, 444);
@@ -268,7 +271,7 @@
             // labelFeelsLikeInfo
             // 
             this.labelFeelsLikeInfo.AutoSize = true;
-            this.labelFeelsLikeInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelFeelsLikeInfo.BackColor = System.Drawing.Color.CadetBlue;
             this.labelFeelsLikeInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFeelsLikeInfo.ForeColor = System.Drawing.Color.White;
             this.labelFeelsLikeInfo.Location = new System.Drawing.Point(572, 170);
@@ -280,7 +283,7 @@
             // labelFeelsLike
             // 
             this.labelFeelsLike.AutoSize = true;
-            this.labelFeelsLike.BackColor = System.Drawing.Color.Transparent;
+            this.labelFeelsLike.BackColor = System.Drawing.Color.CadetBlue;
             this.labelFeelsLike.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFeelsLike.ForeColor = System.Drawing.Color.White;
             this.labelFeelsLike.Location = new System.Drawing.Point(772, 170);
@@ -292,7 +295,7 @@
             // labelLocationName
             // 
             this.labelLocationName.AutoSize = true;
-            this.labelLocationName.BackColor = System.Drawing.Color.Transparent;
+            this.labelLocationName.BackColor = System.Drawing.Color.CadetBlue;
             this.labelLocationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLocationName.ForeColor = System.Drawing.Color.White;
             this.labelLocationName.Location = new System.Drawing.Point(316, 143);
@@ -303,10 +306,10 @@
             // 
             // btnCurr
             // 
-            this.btnCurr.BackColor = System.Drawing.Color.Transparent;
+            this.btnCurr.BackColor = System.Drawing.Color.CadetBlue;
             this.btnCurr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCurr.ForeColor = System.Drawing.Color.Black;
-            this.btnCurr.Location = new System.Drawing.Point(772, 34);
+            this.btnCurr.Location = new System.Drawing.Point(691, 34);
             this.btnCurr.Name = "btnCurr";
             this.btnCurr.Size = new System.Drawing.Size(246, 46);
             this.btnCurr.TabIndex = 22;
@@ -314,13 +317,27 @@
             this.btnCurr.UseVisualStyleBackColor = false;
             this.btnCurr.Click += new System.EventHandler(this.btnCurr_Click);
             // 
+            // btnMode
+            // 
+            this.btnMode.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnMode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMode.Location = new System.Drawing.Point(958, 34);
+            this.btnMode.Name = "btnMode";
+            this.btnMode.Size = new System.Drawing.Size(151, 47);
+            this.btnMode.TabIndex = 23;
+            this.btnMode.Text = "Light Mode";
+            this.btnMode.UseVisualStyleBackColor = false;
+            this.btnMode.Click += new System.EventHandler(this.btnMode_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1108, 557);
+            this.ClientSize = new System.Drawing.Size(1147, 612);
+            this.Controls.Add(this.btnMode);
             this.Controls.Add(this.btnCurr);
             this.Controls.Add(this.labelLocationName);
             this.Controls.Add(this.labelFeelsLike);
@@ -376,6 +393,7 @@
         private System.Windows.Forms.Label labelFeelsLike;
         private System.Windows.Forms.Label labelLocationName;
         private System.Windows.Forms.Button btnCurr;
+        private System.Windows.Forms.Button btnMode;
     }
 }
 
