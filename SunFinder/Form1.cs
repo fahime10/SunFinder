@@ -15,7 +15,6 @@ namespace SunFinder
 {
     public partial class Form1 : Form
     {
-        private GeoCoordinateWatcher geoWatcher;
         private bool isCelsius = true;
 
         // Light mode colors
@@ -29,7 +28,6 @@ namespace SunFinder
         public Form1()
         {
             InitializeComponent();
-            GeoWatcher();
         }
 
         private void ApplyColorScheme(bool isDarkMode, Control control)
@@ -68,31 +66,6 @@ namespace SunFinder
         private void btnMode_Click(object sender, EventArgs e)
         {
             ToggleDarkMode();
-        }
-
-        private void GeoWatcher()
-        {
-            geoWatcher = new GeoCoordinateWatcher();
-            geoWatcher.PositionChanged += positionChanged;
-        }
-
-        private void positionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
-        {
-            var latitude = e.Position.Location.Latitude;
-            var longitude = e.Position.Location.Longitude;
-
-            MessageBox.Show($"Latitude: {latitude}, Longitude: {longitude}");
-        }
-        private void btnCurr_Click(object sender, EventArgs e)
-        {
-            if (geoWatcher.Status == GeoPositionStatus.Ready)
-            {
-                geoWatcher.Start();
-            }
-            else
-            {
-                MessageBox.Show("Geolocation not available or not ready.");
-            }
         }
 
         readonly string APIkey = "cf20561ce137565baf710599e21bc9be";

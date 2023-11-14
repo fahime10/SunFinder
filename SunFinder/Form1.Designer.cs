@@ -50,7 +50,6 @@
             this.labelFeelsLikeInfo = new System.Windows.Forms.Label();
             this.labelFeelsLike = new System.Windows.Forms.Label();
             this.labelLocationName = new System.Windows.Forms.Label();
-            this.btnCurr = new System.Windows.Forms.Button();
             this.btnMode = new System.Windows.Forms.Button();
             this.btnConverter = new System.Windows.Forms.Button();
             this.labelUnit1 = new System.Windows.Forms.Label();
@@ -307,19 +306,6 @@
             this.labelLocationName.TabIndex = 21;
             this.labelLocationName.Text = "Location";
             // 
-            // btnCurr
-            // 
-            this.btnCurr.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnCurr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCurr.ForeColor = System.Drawing.Color.Black;
-            this.btnCurr.Location = new System.Drawing.Point(691, 34);
-            this.btnCurr.Name = "btnCurr";
-            this.btnCurr.Size = new System.Drawing.Size(246, 46);
-            this.btnCurr.TabIndex = 22;
-            this.btnCurr.Text = "Current Location";
-            this.btnCurr.UseVisualStyleBackColor = false;
-            this.btnCurr.Click += new System.EventHandler(this.btnCurr_Click);
-            // 
             // btnMode
             // 
             this.btnMode.BackColor = System.Drawing.Color.CadetBlue;
@@ -381,7 +367,6 @@
             this.Controls.Add(this.labelUnit1);
             this.Controls.Add(this.btnConverter);
             this.Controls.Add(this.btnMode);
-            this.Controls.Add(this.btnCurr);
             this.Controls.Add(this.labelLocationName);
             this.Controls.Add(this.labelFeelsLike);
             this.Controls.Add(this.labelFeelsLikeInfo);
@@ -435,7 +420,6 @@
         private System.Windows.Forms.Label labelFeelsLikeInfo;
         private System.Windows.Forms.Label labelFeelsLike;
         private System.Windows.Forms.Label labelLocationName;
-        private System.Windows.Forms.Button btnCurr;
         private System.Windows.Forms.Button btnMode;
         private System.Windows.Forms.Button btnConverter;
         private System.Windows.Forms.Label labelUnit1;
