@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.labelLocation = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.txtBoxCity = new System.Windows.Forms.TextBox();
-            this.labelCondition = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.labelDetails = new System.Windows.Forms.Label();
             this.labelSunriseInfo = new System.Windows.Forms.Label();
             this.labelSunrise = new System.Windows.Forms.Label();
@@ -49,13 +48,27 @@
             this.labelTemperature = new System.Windows.Forms.Label();
             this.labelFeelsLikeInfo = new System.Windows.Forms.Label();
             this.labelFeelsLike = new System.Windows.Forms.Label();
-            this.labelLocationName = new System.Windows.Forms.Label();
             this.btnMode = new System.Windows.Forms.Button();
             this.btnConverter = new System.Windows.Forms.Button();
             this.labelUnit1 = new System.Windows.Forms.Label();
             this.labelUnit2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelCondition = new System.Windows.Forms.Label();
             this.labelCurrentWeather = new System.Windows.Forms.Label();
+            this.labelLocationName = new System.Windows.Forms.Label();
+            this.labelAirPollutionInfo = new System.Windows.Forms.Label();
+            this.labelAirPollution = new System.Windows.Forms.Label();
+            this.labelCOInfo = new System.Windows.Forms.Label();
+            this.labelCO = new System.Windows.Forms.Label();
+            this.labelNOInfo = new System.Windows.Forms.Label();
+            this.labelNO = new System.Windows.Forms.Label();
+            this.labelNO2Info = new System.Windows.Forms.Label();
+            this.labelNO2 = new System.Windows.Forms.Label();
+            this.labelO3Info = new System.Windows.Forms.Label();
+            this.labelO3 = new System.Windows.Forms.Label();
+            this.labelSO2Info = new System.Windows.Forms.Label();
+            this.labelSO2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +84,17 @@
             this.labelLocation.TabIndex = 0;
             this.labelLocation.Text = "Location (by city):";
             // 
+            // txtBoxCity
+            // 
+            this.txtBoxCity.BackColor = System.Drawing.Color.Azure;
+            this.txtBoxCity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBoxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxCity.Location = new System.Drawing.Point(274, 34);
+            this.txtBoxCity.MaxLength = 58;
+            this.txtBoxCity.Name = "txtBoxCity";
+            this.txtBoxCity.Size = new System.Drawing.Size(487, 39);
+            this.txtBoxCity.TabIndex = 1;
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Azure;
@@ -84,29 +108,6 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtBoxCity
-            // 
-            this.txtBoxCity.BackColor = System.Drawing.Color.Azure;
-            this.txtBoxCity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBoxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCity.Location = new System.Drawing.Point(274, 34);
-            this.txtBoxCity.MaxLength = 58;
-            this.txtBoxCity.Name = "txtBoxCity";
-            this.txtBoxCity.Size = new System.Drawing.Size(487, 39);
-            this.txtBoxCity.TabIndex = 1;
-            // 
-            // labelCondition
-            // 
-            this.labelCondition.AutoSize = true;
-            this.labelCondition.BackColor = System.Drawing.Color.Transparent;
-            this.labelCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCondition.ForeColor = System.Drawing.Color.Black;
-            this.labelCondition.Location = new System.Drawing.Point(307, 235);
-            this.labelCondition.Name = "labelCondition";
-            this.labelCondition.Size = new System.Drawing.Size(136, 32);
-            this.labelCondition.TabIndex = 3;
-            this.labelCondition.Text = "Condition";
             // 
             // labelDetails
             // 
@@ -298,18 +299,6 @@
             this.labelFeelsLike.TabIndex = 20;
             this.labelFeelsLike.Text = "Unknown";
             // 
-            // labelLocationName
-            // 
-            this.labelLocationName.AutoSize = true;
-            this.labelLocationName.BackColor = System.Drawing.Color.Transparent;
-            this.labelLocationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocationName.ForeColor = System.Drawing.Color.Black;
-            this.labelLocationName.Location = new System.Drawing.Point(294, 84);
-            this.labelLocationName.Name = "labelLocationName";
-            this.labelLocationName.Size = new System.Drawing.Size(173, 46);
-            this.labelLocationName.TabIndex = 21;
-            this.labelLocationName.Text = "Location";
-            // 
             // btnMode
             // 
             this.btnMode.BackColor = System.Drawing.Color.Azure;
@@ -373,6 +362,18 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Description:";
             // 
+            // labelCondition
+            // 
+            this.labelCondition.AutoSize = true;
+            this.labelCondition.BackColor = System.Drawing.Color.Transparent;
+            this.labelCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCondition.ForeColor = System.Drawing.Color.Black;
+            this.labelCondition.Location = new System.Drawing.Point(307, 235);
+            this.labelCondition.Name = "labelCondition";
+            this.labelCondition.Size = new System.Drawing.Size(136, 32);
+            this.labelCondition.TabIndex = 3;
+            this.labelCondition.Text = "Condition";
+            // 
             // labelCurrentWeather
             // 
             this.labelCurrentWeather.AutoSize = true;
@@ -384,13 +385,194 @@
             this.labelCurrentWeather.TabIndex = 28;
             this.labelCurrentWeather.Text = "Current weather";
             // 
+            // labelLocationName
+            // 
+            this.labelLocationName.AutoSize = true;
+            this.labelLocationName.BackColor = System.Drawing.Color.Transparent;
+            this.labelLocationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLocationName.ForeColor = System.Drawing.Color.Black;
+            this.labelLocationName.Location = new System.Drawing.Point(294, 84);
+            this.labelLocationName.Name = "labelLocationName";
+            this.labelLocationName.Size = new System.Drawing.Size(173, 46);
+            this.labelLocationName.TabIndex = 21;
+            this.labelLocationName.Text = "Location";
+            // 
+            // labelAirPollutionInfo
+            // 
+            this.labelAirPollutionInfo.AutoSize = true;
+            this.labelAirPollutionInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelAirPollutionInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAirPollutionInfo.ForeColor = System.Drawing.Color.Black;
+            this.labelAirPollutionInfo.Location = new System.Drawing.Point(336, 561);
+            this.labelAirPollutionInfo.Name = "labelAirPollutionInfo";
+            this.labelAirPollutionInfo.Size = new System.Drawing.Size(183, 40);
+            this.labelAirPollutionInfo.TabIndex = 29;
+            this.labelAirPollutionInfo.Text = "Air Quality";
+            // 
+            // labelAirPollution
+            // 
+            this.labelAirPollution.AutoSize = true;
+            this.labelAirPollution.BackColor = System.Drawing.Color.Transparent;
+            this.labelAirPollution.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAirPollution.ForeColor = System.Drawing.Color.Black;
+            this.labelAirPollution.Location = new System.Drawing.Point(594, 561);
+            this.labelAirPollution.Name = "labelAirPollution";
+            this.labelAirPollution.Size = new System.Drawing.Size(167, 40);
+            this.labelAirPollution.TabIndex = 30;
+            this.labelAirPollution.Text = "Unknown";
+            // 
+            // labelCOInfo
+            // 
+            this.labelCOInfo.AutoSize = true;
+            this.labelCOInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelCOInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCOInfo.ForeColor = System.Drawing.Color.Black;
+            this.labelCOInfo.Location = new System.Drawing.Point(72, 698);
+            this.labelCOInfo.Name = "labelCOInfo";
+            this.labelCOInfo.Size = new System.Drawing.Size(313, 32);
+            this.labelCOInfo.TabIndex = 31;
+            this.labelCOInfo.Text = "Carbon Monoxide (CO):";
+            // 
+            // labelCO
+            // 
+            this.labelCO.AutoSize = true;
+            this.labelCO.BackColor = System.Drawing.Color.Transparent;
+            this.labelCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCO.ForeColor = System.Drawing.Color.Black;
+            this.labelCO.Location = new System.Drawing.Point(421, 698);
+            this.labelCO.Name = "labelCO";
+            this.labelCO.Size = new System.Drawing.Size(132, 32);
+            this.labelCO.TabIndex = 32;
+            this.labelCO.Text = "Unknown";
+            // 
+            // labelNOInfo
+            // 
+            this.labelNOInfo.AutoSize = true;
+            this.labelNOInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelNOInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNOInfo.ForeColor = System.Drawing.Color.Black;
+            this.labelNOInfo.Location = new System.Drawing.Point(72, 784);
+            this.labelNOInfo.Name = "labelNOInfo";
+            this.labelNOInfo.Size = new System.Drawing.Size(279, 32);
+            this.labelNOInfo.TabIndex = 33;
+            this.labelNOInfo.Text = "Nitrogen Oxide (NO):";
+            // 
+            // labelNO
+            // 
+            this.labelNO.AutoSize = true;
+            this.labelNO.BackColor = System.Drawing.Color.Transparent;
+            this.labelNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNO.ForeColor = System.Drawing.Color.Black;
+            this.labelNO.Location = new System.Drawing.Point(421, 784);
+            this.labelNO.Name = "labelNO";
+            this.labelNO.Size = new System.Drawing.Size(132, 32);
+            this.labelNO.TabIndex = 34;
+            this.labelNO.Text = "Unknown";
+            // 
+            // labelNO2Info
+            // 
+            this.labelNO2Info.AutoSize = true;
+            this.labelNO2Info.BackColor = System.Drawing.Color.Transparent;
+            this.labelNO2Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNO2Info.ForeColor = System.Drawing.Color.Black;
+            this.labelNO2Info.Location = new System.Drawing.Point(72, 877);
+            this.labelNO2Info.Name = "labelNO2Info";
+            this.labelNO2Info.Size = new System.Drawing.Size(316, 32);
+            this.labelNO2Info.TabIndex = 35;
+            this.labelNO2Info.Text = "Nitrogen Dioxide (NO2):";
+            // 
+            // labelNO2
+            // 
+            this.labelNO2.AutoSize = true;
+            this.labelNO2.BackColor = System.Drawing.Color.Transparent;
+            this.labelNO2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNO2.ForeColor = System.Drawing.Color.Black;
+            this.labelNO2.Location = new System.Drawing.Point(421, 877);
+            this.labelNO2.Name = "labelNO2";
+            this.labelNO2.Size = new System.Drawing.Size(132, 32);
+            this.labelNO2.TabIndex = 36;
+            this.labelNO2.Text = "Unknown";
+            // 
+            // labelO3Info
+            // 
+            this.labelO3Info.AutoSize = true;
+            this.labelO3Info.BackColor = System.Drawing.Color.Transparent;
+            this.labelO3Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelO3Info.ForeColor = System.Drawing.Color.Black;
+            this.labelO3Info.Location = new System.Drawing.Point(658, 698);
+            this.labelO3Info.Name = "labelO3Info";
+            this.labelO3Info.Size = new System.Drawing.Size(169, 32);
+            this.labelO3Info.TabIndex = 37;
+            this.labelO3Info.Text = "Ozone (O3):";
+            // 
+            // labelO3
+            // 
+            this.labelO3.AutoSize = true;
+            this.labelO3.BackColor = System.Drawing.Color.Transparent;
+            this.labelO3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelO3.ForeColor = System.Drawing.Color.Black;
+            this.labelO3.Location = new System.Drawing.Point(1018, 698);
+            this.labelO3.Name = "labelO3";
+            this.labelO3.Size = new System.Drawing.Size(132, 32);
+            this.labelO3.TabIndex = 38;
+            this.labelO3.Text = "Unknown";
+            // 
+            // labelSO2Info
+            // 
+            this.labelSO2Info.AutoSize = true;
+            this.labelSO2Info.BackColor = System.Drawing.Color.Transparent;
+            this.labelSO2Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSO2Info.ForeColor = System.Drawing.Color.Black;
+            this.labelSO2Info.Location = new System.Drawing.Point(663, 784);
+            this.labelSO2Info.Name = "labelSO2Info";
+            this.labelSO2Info.Size = new System.Drawing.Size(306, 32);
+            this.labelSO2Info.TabIndex = 39;
+            this.labelSO2Info.Text = "Sulphur Dioxide (SO2):";
+            // 
+            // labelSO2
+            // 
+            this.labelSO2.AutoSize = true;
+            this.labelSO2.BackColor = System.Drawing.Color.Transparent;
+            this.labelSO2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSO2.ForeColor = System.Drawing.Color.Black;
+            this.labelSO2.Location = new System.Drawing.Point(1018, 784);
+            this.labelSO2.Name = "labelSO2";
+            this.labelSO2.Size = new System.Drawing.Size(132, 32);
+            this.labelSO2.TabIndex = 40;
+            this.labelSO2.Text = "Unknown";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(421, 627);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(307, 32);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "All measured in (µg/m³)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1185, 612);
+            this.ClientSize = new System.Drawing.Size(1185, 1001);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelSO2);
+            this.Controls.Add(this.labelSO2Info);
+            this.Controls.Add(this.labelO3);
+            this.Controls.Add(this.labelO3Info);
+            this.Controls.Add(this.labelNO2);
+            this.Controls.Add(this.labelNO2Info);
+            this.Controls.Add(this.labelNO);
+            this.Controls.Add(this.labelNOInfo);
+            this.Controls.Add(this.labelCO);
+            this.Controls.Add(this.labelCOInfo);
+            this.Controls.Add(this.labelAirPollution);
+            this.Controls.Add(this.labelAirPollutionInfo);
             this.Controls.Add(this.labelLocationName);
             this.Controls.Add(this.labelCurrentWeather);
             this.Controls.Add(this.labelCondition);
@@ -431,9 +613,8 @@
         #endregion
 
         private System.Windows.Forms.Label labelLocation;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtBoxCity;
-        private System.Windows.Forms.Label labelCondition;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label labelDetails;
         private System.Windows.Forms.Label labelSunriseInfo;
         private System.Windows.Forms.Label labelSunrise;
@@ -450,13 +631,27 @@
         private System.Windows.Forms.Label labelTemperature;
         private System.Windows.Forms.Label labelFeelsLikeInfo;
         private System.Windows.Forms.Label labelFeelsLike;
-        private System.Windows.Forms.Label labelLocationName;
         private System.Windows.Forms.Button btnMode;
         private System.Windows.Forms.Button btnConverter;
         private System.Windows.Forms.Label labelUnit1;
         private System.Windows.Forms.Label labelUnit2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCondition;
         private System.Windows.Forms.Label labelCurrentWeather;
+        private System.Windows.Forms.Label labelLocationName;
+        private System.Windows.Forms.Label labelAirPollutionInfo;
+        private System.Windows.Forms.Label labelAirPollution;
+        private System.Windows.Forms.Label labelCOInfo;
+        private System.Windows.Forms.Label labelCO;
+        private System.Windows.Forms.Label labelNOInfo;
+        private System.Windows.Forms.Label labelNO;
+        private System.Windows.Forms.Label labelNO2Info;
+        private System.Windows.Forms.Label labelNO2;
+        private System.Windows.Forms.Label labelO3Info;
+        private System.Windows.Forms.Label labelO3;
+        private System.Windows.Forms.Label labelSO2Info;
+        private System.Windows.Forms.Label labelSO2;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -8,12 +8,12 @@ namespace SunFinder
 {
     class WeatherDetails
     {
-        public class coordinates
+        public class coord
         {
             // from coord.lon
-            public double longitude { get; set; }
+            public double lon { get; set; }
             // from coord.lat
-            public double latitude { get; set; }
+            public double lat { get; set; }
         }
 
         public class weather
@@ -54,7 +54,7 @@ namespace SunFinder
 
         public class result
         {
-            public coordinates coord { get; set; }
+            public coord coord { get; set; }
             public List<weather> weather { get; set; }
             public main main { get; set; }
             public wind wind { get; set; }
