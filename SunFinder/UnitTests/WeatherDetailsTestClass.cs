@@ -15,9 +15,8 @@ namespace SunFinder.UnitTests
             this.httpClientWrapper = httpClientWrapper;
         }
 
-        public async Task<string> GetDataFromAPI()
+        public async Task<string> GetDataFromAPI(string url)
         {
-            string url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=qwerty";
             var response = await httpClientWrapper.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
@@ -68,23 +67,42 @@ namespace SunFinder.UnitTests
 
             var testClass = new WeatherDetailsClass(mockHttpClientWrapper.Object);
 
-            var result = await testClass.GetDataFromAPI();
+            var result = await testClass.GetDataFromAPI(url + APIKey);
 
             Assert.AreEqual("{\"data\": \"mocked_data\"}", result);
         }
 
-        // Mock test a failure response of the given API
+        // Mock test a failure response of the given API, with a bad key
         [TestMethod]
         public async Task GetDataFromApiAsyncFailure()
         {
+            string badKey = APIKey.Substring(1);
             var mockHttpClientWrapper = new Mock<IHttpClientWrapper>();
             mockHttpClientWrapper
-                .Setup(client => client.GetAsync(url + APIKey))
+                .Setup(client => client.GetAsync(url + badKey))
                 .ReturnsAsync(new HttpResponseMessage { StatusCode = System.Net.HttpStatusCode.NotFound });
 
             var testClass = new WeatherDetailsClass(mockHttpClientWrapper.Object);
 
-            var result = await testClass.GetDataFromAPI();
+            var result = await testClass.GetDataFromAPI(url + badKey);
+
+            Assert.IsNull(result);
+        }
+
+        // Mock test API response when no input is provided
+        [TestMethod]
+        public async Task TestNoInputForAPI()
+        {
+            string noCityUrl = "https://api.openweathermap.org/data/2.5/weather?q=&appid=qwerty";
+
+            var mockHttpClientWrapper = new Mock<IHttpClientWrapper>();
+            mockHttpClientWrapper
+                .Setup(client => client.GetAsync(noCityUrl))
+                .ReturnsAsync(new HttpResponseMessage { StatusCode = System.Net.HttpStatusCode.NotFound });
+
+            var testClass = new WeatherDetailsClass(mockHttpClientWrapper.Object);
+
+            var result = await testClass.GetDataFromAPI(noCityUrl);
 
             Assert.IsNull(result);
         }
