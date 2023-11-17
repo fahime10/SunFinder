@@ -42,3 +42,5 @@ C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Castle.Core.xml
 C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Moq.xml
 C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.csproj.SuggestedBindingRedirects.cache
+C:\Users\fahim\source\repos\SunFinder\SunFinder\obj\Debug\SunFinder.exe.config
