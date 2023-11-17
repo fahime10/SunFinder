@@ -34,3 +34,11 @@ C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Microsoft.VisualStudio
 C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
 C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Castle.Core.dll
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Moq.dll
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Castle.Core.xml
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\Moq.xml
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\fahim\source\repos\SunFinder\SunFinder\bin\Debug\System.Threading.Tasks.Extensions.xml
