@@ -72,6 +72,7 @@ namespace SunFinder.UnitTests
             Assert.IsNotNull(air);
         }
 
+        // Mock test a success response of the given API
         [TestMethod]
         public async Task GetDataFromApiAsyncSuccess()
         {
@@ -89,6 +90,57 @@ namespace SunFinder.UnitTests
             var result = await testClass.GetDataFromAPI();
 
             Assert.AreEqual("{\"data\": \"mocked_data\"}", result);
+        }
+
+        // Mock test a failure response of the given API
+        [TestMethod]
+        public async Task GetDataFromApiAsyncFailure()
+        {
+            var mockHttpClientWrapper = new Mock<IHttpClientWrapper>();
+            mockHttpClientWrapper
+                .Setup(client => client.GetAsync(url))
+                .ReturnsAsync(new HttpResponseMessage { StatusCode = System.Net.HttpStatusCode.NotFound });
+
+            var testClass = new AirPollutionClass(mockHttpClientWrapper.Object);
+
+            var result = await testClass.GetDataFromAPI();
+
+            Assert.IsNull(result);
+        }
+
+        // Test pollution function
+        [TestMethod]
+        public void TestPollution()
+        {
+            AirPollution air = new AirPollution();
+
+            for (int i = 1; i < 7; i++)
+            {
+                int indexValue = i;
+                string result = air.pollution(indexValue);
+
+                switch(i)
+                {
+                    case 1:
+                        Assert.AreEqual("Low pollution - Good", result);
+                        break;
+                    case 2:
+                        Assert.AreEqual("Some pollution - Fair", result);
+                        break;
+                    case 3:
+                        Assert.AreEqual("Moderate pollution", result);
+                        break;
+                    case 4:
+                        Assert.AreEqual("High pollution - Poor", result);
+                        break;
+                    case 5:
+                        Assert.AreEqual("Very high pollution - Very poor", result);
+                        break;
+                    default:
+                        Assert.AreEqual("Unknown", result);
+                        break;
+                }
+            }
         }
     }
 }
