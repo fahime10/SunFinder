@@ -6,18 +6,18 @@ using static System.Net.WebRequestMethods;
 
 namespace SunFinder.UnitTests
 {
-    public class AirPollutionClass
+    public class WeatherDetailsClass
     {
         private readonly IHttpClientWrapper httpClientWrapper;
 
-        public AirPollutionClass(IHttpClientWrapper httpClientWrapper)
+        public WeatherDetailsClass(IHttpClientWrapper httpClientWrapper)
         {
             this.httpClientWrapper = httpClientWrapper;
         }
 
         public async Task<string> GetDataFromAPI()
         {
-            string url = "http://api.openweathermap.org/data/2.5/air_pollution?lat=50.0&lon=50.0&appid=qwerty";
+            string url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=qwerty";
             var response = await httpClientWrapper.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
@@ -32,10 +32,10 @@ namespace SunFinder.UnitTests
     }
 
     [TestClass]
-    public class AirPollutionTestClass
+    public class WeatherDetailsTestClass
     {
         // Test data to be used
-        readonly string url = "http://api.openweathermap.org/data/2.5/air_pollution?lat=50.0&lon=50.0&appid=";
+        readonly string url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=";
         string APIKey = "qwerty";
 
         // First test check
@@ -49,7 +49,7 @@ namespace SunFinder.UnitTests
         [TestMethod]
         public void InstanceOK()
         {
-            AirPollution air = new AirPollution();
+            WeatherDetails air = new WeatherDetails();
             Assert.IsNotNull(air);
         }
 
@@ -66,7 +66,7 @@ namespace SunFinder.UnitTests
                     Content = new StringContent("{\"data\": \"mocked_data\"}")
                 });
 
-            var testClass = new AirPollutionClass(mockHttpClientWrapper.Object);
+            var testClass = new WeatherDetailsClass(mockHttpClientWrapper.Object);
 
             var result = await testClass.GetDataFromAPI();
 
@@ -82,46 +82,11 @@ namespace SunFinder.UnitTests
                 .Setup(client => client.GetAsync(url + APIKey))
                 .ReturnsAsync(new HttpResponseMessage { StatusCode = System.Net.HttpStatusCode.NotFound });
 
-            var testClass = new AirPollutionClass(mockHttpClientWrapper.Object);
+            var testClass = new WeatherDetailsClass(mockHttpClientWrapper.Object);
 
             var result = await testClass.GetDataFromAPI();
 
             Assert.IsNull(result);
-        }
-
-        // Test pollution function
-        [TestMethod]
-        public void TestPollution()
-        {
-            AirPollution air = new AirPollution();
-
-            for (int i = 1; i < 7; i++)
-            {
-                int indexValue = i;
-                string result = air.pollution(indexValue);
-
-                switch(i)
-                {
-                    case 1:
-                        Assert.AreEqual("Low pollution - Good", result);
-                        break;
-                    case 2:
-                        Assert.AreEqual("Some pollution - Fair", result);
-                        break;
-                    case 3:
-                        Assert.AreEqual("Moderate pollution", result);
-                        break;
-                    case 4:
-                        Assert.AreEqual("High pollution - Poor", result);
-                        break;
-                    case 5:
-                        Assert.AreEqual("Very high pollution - Very poor", result);
-                        break;
-                    default:
-                        Assert.AreEqual("Unknown", result);
-                        break;
-                }
-            }
         }
     }
 }
