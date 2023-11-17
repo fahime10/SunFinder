@@ -70,7 +70,7 @@ namespace SunFinder
             ToggleDarkMode();
         }
 
-        readonly string APIkey = "cf20561ce137565baf710599e21bc9be";
+        readonly string APIKey = "cf20561ce137565baf710599e21bc9be";
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -86,7 +86,7 @@ namespace SunFinder
                     string url = string.Format(
                         "https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}",
                         txtBoxCity.Text.Substring(0, 1).ToUpper() + txtBoxCity.Text.Substring(1),
-                        APIkey
+                        APIKey
                      );
 
                     var jsonOutput = client.DownloadString(url);
@@ -127,7 +127,7 @@ namespace SunFinder
                         "http://api.openweathermap.org/data/2.5/air_pollution?lat={0}&lon={1}&appid={2}",
                         lat, 
                         lon,
-                        APIkey
+                        APIKey
                      );
 
                     var jsonOutput2 = client2.DownloadString(url2);
