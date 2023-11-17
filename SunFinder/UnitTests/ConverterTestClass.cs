@@ -34,7 +34,7 @@ namespace SunFinder.UnitTests
         {
             double result;
             Converter converter = new Converter();
-            result = converter.convertKToC(kelvinTemp);
+            result = converter.ConvertKToC(kelvinTemp);
             Assert.AreEqual(26.85, result);
         }
 
@@ -47,7 +47,7 @@ namespace SunFinder.UnitTests
 
             double result;
             Converter converter = new Converter();
-            converter.tempConverter(isCelsius, label, label, dummyButton, dummyLabel, dummyLabel);
+            converter.TempConverter(isCelsius, label, label, dummyButton, dummyLabel, dummyLabel);
 
             result = Convert.ToDouble(label.Text);
 
@@ -64,11 +64,27 @@ namespace SunFinder.UnitTests
 
             double result;
             Converter converter = new Converter();
-            converter.tempConverter(isCelsius, label, label, dummyButton, dummyLabel, dummyLabel);
+            converter.TempConverter(isCelsius, label, label, dummyButton, dummyLabel, dummyLabel);
 
             result = Convert.ToDouble(label.Text);
 
             Assert.AreEqual(40.0, result);
+        }
+
+        // Test to check the correct time is displayed
+        [TestMethod]
+        public void TestConvertDT()
+        {
+            long sunrise = 1700205681;
+            long sunset = 1700237381;
+
+            Converter converter = new Converter();
+
+            string sunriseResult = converter.ConvertDT(sunrise).ToShortTimeString();
+            string sunsetResult = converter.ConvertDT(sunset).ToShortTimeString();
+
+            Assert.AreEqual("07:21", sunriseResult);
+            Assert.AreEqual("16:09", sunsetResult);
         }
     }
 }

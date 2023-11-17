@@ -104,11 +104,11 @@ namespace SunFinder
                     labelHumidity.Text = details.main.humidity.ToString() + " %";
 
                     Converter converter = new Converter();
-                    labelTemperature.Text = converter.convertKToC(details.main.temp).ToString();
-                    labelFeelsLike.Text = converter.convertKToC(details.main.feels_like).ToString();
+                    labelTemperature.Text = converter.ConvertKToC(details.main.temp).ToString();
+                    labelFeelsLike.Text = converter.ConvertKToC(details.main.feels_like).ToString();
 
-                    labelSunrise.Text = converter.convertDT(details.sys.sunrise).ToShortTimeString();
-                    labelSunset.Text = converter.convertDT(details.sys.sunset).ToShortTimeString();
+                    labelSunrise.Text = converter.ConvertDT(details.sys.sunrise).ToShortTimeString();
+                    labelSunset.Text = converter.ConvertDT(details.sys.sunset).ToShortTimeString();
 
                     labelWindSpeed.Text = details.wind.speed.ToString() + " m/s";
                     labelPressure.Text =
@@ -137,7 +137,7 @@ namespace SunFinder
 
                     AirPollution measurer = new AirPollution();
 
-                    labelAirPollution.Text = measurer.pollution(airDetails.list[0].main.aqi);
+                    labelAirPollution.Text = measurer.Pollution(airDetails.list[0].main.aqi);
 
                     labelCO.Text = airDetails.list[0].components.co.ToString();
                     labelNO.Text = airDetails.list[0].components.no.ToString();
@@ -157,7 +157,7 @@ namespace SunFinder
         private void btnToF_Click(object sender, EventArgs e)
         {
             Converter converter = new Converter();
-            converter.tempConverter(isCelsius, labelTemperature,  labelFeelsLike, btnConverter,
+            converter.TempConverter(isCelsius, labelTemperature,  labelFeelsLike, btnConverter,
                 labelUnit1, labelUnit2);
 
             isCelsius = !isCelsius;

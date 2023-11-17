@@ -89,7 +89,7 @@ namespace SunFinder.UnitTests
             Assert.IsNull(result);
         }
 
-        // Test pollution function
+        // Test Pollution function
         [TestMethod]
         public void TestPollution()
         {
@@ -98,7 +98,7 @@ namespace SunFinder.UnitTests
             for (int i = 1; i < 7; i++)
             {
                 int indexValue = i;
-                string result = air.pollution(indexValue);
+                string result = air.Pollution(indexValue);
 
                 switch(i)
                 {
@@ -112,10 +112,10 @@ namespace SunFinder.UnitTests
                         Assert.AreEqual("Moderate pollution", result);
                         break;
                     case 4:
-                        Assert.AreEqual("High pollution - Poor", result);
+                        Assert.AreEqual("High pollution", result);
                         break;
                     case 5:
-                        Assert.AreEqual("Very high pollution - Very poor", result);
+                        Assert.AreEqual("Very high pollution", result);
                         break;
                     default:
                         Assert.AreEqual("Unknown", result);
