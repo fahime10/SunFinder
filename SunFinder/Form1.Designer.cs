@@ -557,6 +557,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1185, 1001);
@@ -602,7 +604,9 @@
             this.Controls.Add(this.labelLocation);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
+            this.MinimumSize = new System.Drawing.Size(1207, 1006);
             this.Name = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
             this.Text = "SunFinder";
             ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).EndInit();
             this.ResumeLayout(false);

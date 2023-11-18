@@ -151,6 +151,7 @@ namespace SunFinder
             {
                 MessageBox.Show("Please enter a sensible city", "Error");
                 txtBoxCity.Text = "";
+                Console.WriteLine(ex.Message);
             }
         }
 
