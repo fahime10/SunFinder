@@ -2,7 +2,6 @@
 using Moq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using static System.Net.WebRequestMethods;
 
 namespace SunFinder.UnitTests
 {
@@ -54,7 +53,7 @@ namespace SunFinder.UnitTests
 
         // Mock test a success response of the given API
         [TestMethod]
-        public async Task GetDataFromApiAsyncSuccess()
+        public async Task TestGetDataFromApiAsyncSuccess()
         {
             var mockHttpClientWrapper = new Mock<IHttpClientWrapper>();
             mockHttpClientWrapper
@@ -74,7 +73,7 @@ namespace SunFinder.UnitTests
 
         // Mock test a failure response of the given API, with a bad key
         [TestMethod]
-        public async Task GetDataFromApiAsyncFailure()
+        public async Task TestGetDataFromApiAsyncFailure()
         {
             string badKey = APIKey.Substring(1);
             var mockHttpClientWrapper = new Mock<IHttpClientWrapper>();
