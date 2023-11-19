@@ -3,6 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Net;
+using System.Net.Http;
+using static System.Net.WebRequestMethods;
 
 namespace SunFinder
 {
@@ -72,7 +74,7 @@ namespace SunFinder
             {
                 if (txtBoxCity.Text == "")
                 {
-                    throw new Exception();
+                    throw new ArgumentNullException();
                 }
 
                 using (WebClient client = new WebClient())
@@ -141,9 +143,39 @@ namespace SunFinder
                 }
 
             }
+            catch (ArgumentNullException argNull)
+            {
+                MessageBox.Show("Please enter a city", "Error");
+                Console.WriteLine(argNull.Message);
+            }
+            catch (WebException webEx)
+            {
+                if (webEx.Response is HttpWebResponse response)
+                {
+                    if (response.StatusCode == HttpStatusCode.NotFound)
+                    {
+                        MessageBox.Show("Please enter a sensible city name.\n" +
+                            "The requested resource was not found.", "City Name Error");
+                        Console.WriteLine("The requested resource was not found (404).");
+                    }
+                    else
+                    {
+                        // Handle unexpected http status codes other than 404
+                        MessageBox.Show($"HTTP Error: {response.StatusCode} - {response.StatusDescription}", "Error");
+                        Console.WriteLine($"HTTP Error: {response.StatusCode} - {response.StatusDescription}");
+                    }
+                }
+                else if (webEx.Status == WebExceptionStatus.NameResolutionFailure || 
+                    webEx.Status == WebExceptionStatus.ConnectFailure)
+                {
+                    MessageBox.Show("Missing internet connection", "Network Error");
+                    Console.WriteLine("Missing internet connection");
+                }
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Please enter a sensible city", "Error");
+                // Handle any other unexpected errors during runtime
+                MessageBox.Show("Unknown exception", "Error");
                 Console.WriteLine(ex.Message);
             }
             finally
