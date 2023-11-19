@@ -62,6 +62,7 @@ namespace SunFinder
             catch (Exception ex)
             {
                 MessageBox.Show($"Please input a city first", "Error");
+                Console.WriteLine(ex.Message);
             }
         }
     }
