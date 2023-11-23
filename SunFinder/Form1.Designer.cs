@@ -220,6 +220,7 @@
             // pictureImage
             // 
             this.pictureImage.BackColor = System.Drawing.Color.Transparent;
+            this.pictureImage.ErrorImage = null;
             this.pictureImage.Location = new System.Drawing.Point(-1, 84);
             this.pictureImage.Name = "pictureImage";
             this.pictureImage.Size = new System.Drawing.Size(399, 214);
