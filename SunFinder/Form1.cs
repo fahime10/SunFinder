@@ -27,6 +27,7 @@ namespace SunFinder
         public Form1()
         {
             InitializeComponent();
+            this.BackgroundImage = lightModeBackground;
         }
 
         private void ApplyColorScheme(bool isDarkMode, Control control)
