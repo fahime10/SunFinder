@@ -18,3 +18,10 @@ and latitude details.
 The JSON output from the second call will display information about the air pollution
 levels in those coordinates.
 Light mode and dark mode have also been implemented for user preferences.
+
+## Issues you may encounter
+- Firewall may interfere with the results. For example, trying to get the icon image
+from the link may not work and so may not show itself after running the search.
+This is a network issue.
+- Your antivirus may allow the installation of the application within your machine,
+however, it may not allow to run it. So, you may have to whitelist it from your machine.
